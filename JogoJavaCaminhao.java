@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 //Implementar um jogo , com interface por console, em JAVA.
-//O objetivo do jogo é fazer com que um caminhao, com tanque de TAM = 6 atravesse um caminho de tamanho 10.
+//O objetivo do jogo ï¿½ fazer com que um caminhao, com tanque de TAM = 6 atravesse um caminho de tamanho 10.
 //O jogador vai inserir comandos: avancar, voltar, carregar e descarregar.
 //Avancar e voltar movem o caminhao uma posicao e gastam 1 combustivel.
 //Carregar e descarregar alteram o combustivel do caminhao e do caminho.
@@ -19,7 +19,7 @@ public class jogoCaminhao {
 
 	public void avancar(){
 		if((mapa[posicao]==0)&&(posicao!=0)&&(combustivel==0)){
-			System.out.println("Você perdeu");
+			System.out.println("Vocï¿½ perdeu");
 			System.exit(0);
 		}
 		else if((combustivel>0)&&(posicao>=0)){
@@ -31,7 +31,7 @@ public class jogoCaminhao {
 			System.out.println("Voce reabasteceu completamente");
 			combustivel = 6;
 		}
-		else if(posicao==10){
+		else if(posicao==9){
 			System.out.println("Voce ganhou");
 			System.exit(0);
 		}
@@ -39,10 +39,10 @@ public class jogoCaminhao {
 
 	public void voltar(){
 		if((mapa[posicao]==0)&&(posicao!=0)&&(combustivel==0)){
-			System.out.println("Você perdeu");
+			System.out.println("Vocï¿½ perdeu");
 			System.exit(0);
 		}
-		else if(posicao>0&&(posicao>0)){
+		else if(posicao!=0){
 			System.out.println("Voce voltou uma posicao");
 			posicao--;
 			combustivel--;
@@ -82,7 +82,7 @@ public class jogoCaminhao {
 	}
 	public void terminaJogo(){
 		if((mapa[posicao])!=0&&(combustivel==0)){
-			System.out.println("Você perdeu");
+			System.out.println("Vocï¿½ perdeu");
 			System.exit(0);
 		}
 	}
